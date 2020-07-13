@@ -1,0 +1,26 @@
+version: "3.6"
+services:
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: app
+      MYSQL_USER: web
+      MYSQL_PASSWORD: pass
+      MYSQL_ROOT_PASSWORD: root
+    expose:
+        - "3306"
+    volumes:
+    - mysql:/var/lib/mysql
+  
+  web:
+    build: .
+    ports:
+     - 8083:80
+    volumes:
+    - ./themes:/app/themes
+    - ./profiles:/app/profiles
+    - ./modules:/app/modules
+    - ./sites:/app/sites
+
+volumes:
+  mysql:
