@@ -9,17 +9,13 @@ In order to run multiple Drupal projects one one machine simply rename the proje
 ### 0. Install Docker
 This project uses Docker to manage the installation and configuration of Drupal's dependencies. Make sure that Docker is installed on your host machine. Installation instructions can be found here: [Mac](https://docs.docker.com/v17.12/docker-for-mac/install/)  |  [Windows](https://docs.docker.com/docker-for-windows/install/)  |  [Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
-### 1. Build the project.
+### 1. Install the project.
 
-In order to use this project it must be built in the terminal. 
-
-Use:
+`cd` into the project directory and install Drupal using the provided install script:
 
 ```
-$ docker-compose build
+$ ./install.sh
 ```
-
-The build step will take awhile as it configures the container to meet Drupal's requirements. Ideally this step is only necessary once -- unless of course the container is removed. Because this step creates a brand new Drupal installation, anytime this command is run you will run into Drupal's initial configuration setup because Drupal will need the database credentials again.
 
 ### 2. Launch the projecct.
 
@@ -68,8 +64,7 @@ After this, you should have a fully functional Drupal 8 installation without the
 This project is for creating a dev environment to create and test themes, modules, and profiles. **It does not attempt to solve any update regimes that must be in place on the production server.** Be very careful before implementing this project in a mission critical production environment to avoid issues when updates are released.
 
 
-## Version 1.0b
-Project Directories:
+## Project Directories
 Certain directories have been made available as volumes in order to view changes to developed projects. These folders will be mounted to the appropriate directories in the Drupal installation.
 
 `modules`: Include modules to install into Drupal
@@ -80,7 +75,7 @@ Certain directories have been made available as volumes in order to view changes
 
 `sites`: Site settings
 
-Included version of Drupal: 9.0.6
+Included version of Drupal: 9.0.7
 
 ## License
 MIT
