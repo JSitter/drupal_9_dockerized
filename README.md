@@ -1,4 +1,4 @@
-# Basic Dockerized Drupal 9.0.6 Project
+# Basic Dockerized Drupal 9.0.7 Project
 
 This project allows for the ease of module, profile, and theme development by allowing Docker to take care of running and configuring Apache and MySql. Any themes, profiles, or modules should be placed inside this project's themes, modules, and profiles directory. These directories will be mounted as volumes.
 
