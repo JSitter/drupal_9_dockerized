@@ -17,7 +17,7 @@ This project uses Docker to manage the installation and configuration of Drupal'
 $ ./install.sh
 ```
 
-### 2. Launch the projecct.
+### 2. Launch the project.
 
 Use:
 
